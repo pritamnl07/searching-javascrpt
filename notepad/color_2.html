@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit background color</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="name" style="width: 500px;">
+    </div>
+    <br/>
+    <div>
+        <a>Chooce a color for your background name</a>
+        <button style="background-color: #f0f;" onclick="changeBackground('#f0f')" >PINK</button>
+        <button style="background-color: #0f0;" onclick="changeBackground('#0f0')" >GREEN</button>
+        <button style="background-color: #f00;" onclick="changeBackground('#f00')" >RED</button>
+        <button style="background-color: #0ff;" onclick="changeBackground('#0ff')">SKY</button>
+    </div>
+    <div style="background-color: azure; height: 100px;" id="displayDiv">
+        <h2 style="text-align: center;" id="disName"></h2>
+    </div>
+    
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    function changeBackground(colorCode){
+        $("#displayDiv").css("background-color", colorCode);
+    }
+
+    $(document).ready(function(){
+        $("#name").keyup( function(e){
+            $("#disName").html($("#name").val())
+        })
+    })
+</script>
+</html>

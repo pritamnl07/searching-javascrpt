@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>color</title>
+    </head>
+    <body>
+        <div name="getData" style="height: 50px; width: 100%;font-size: 25px;">
+            Enter Text: <input type="text" id="data" name="datanam" onkeyup="writ(document.getElementById('data').value)">
+        </div>
+        <div name="getFontStyle" style="height: 50px; width: 100%;font-size: 25px;">Font Style:
+            <select style="font-size: 25px;" id="TxtStyl" name="TextStyle" onchange=" writ(document.getElementById('data').value,document.getElementById('TxtStyl').value)">
+                <option value=" " >------Select Font Style-------</option>
+                <option value="Elephant" style="font-family:Elephant;">Elephant</option>
+                <option value="Forte"    style="font-family:Forte;">Forte</option>
+                <option value="Hobo Std" style="font-family:Hobo Std;">Hobo Std</option>
+                <option value="Bell MT"  style="font-family:Bell MT;">Bell MT</option>
+            </select>
+        </div>
+        <div name="getFontColor" style="height: 50px; width: 100%;font-size: 25px;"> Font Color:
+            <button onclick="systems(1,document.getElementById('data').value)" style="font-size: 25px;background-color: #ffee00">Yellow</button>
+            <button onclick="systems(2,document.getElementById('data').value)" style="font-size: 25px;background-color: #26ff00;">Green</button>
+            <button onclick="systems(3,document.getElementById('data').value)" style="font-size: 25px;background-color: #ff002b;">Red</button>
+            <button onclick="systems(4,document.getElementById('data').value)" style="font-size: 25px;background-color: #3c00ff;">Blue</button>
+            
+        </div>
+
+        <p id="disp" style="padding-top: 50px;font-size: 25px;width: 100%;height: 100px;font-size: 40px;color: black;text-align: center;" ></p>
+    </body>
+    <script src="color.js"></script>
+</html>
